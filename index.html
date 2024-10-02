@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ab77d30533.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Comapany Web</title>
+    <script>// Initialize and add the map
+        let map;
+        
+        async function initMap() {
+          // The location of Uluru
+          const position = { lat: -25.344, lng: 131.031 };
+          // Request needed libraries.
+          //@ts-ignore
+          const { Map } = await google.maps.importLibrary("maps");
+          const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+        
+          // The map, centered at Uluru
+          map = new Map(document.getElementById("map"), {
+            zoom: 4,
+            center: position,
+            mapId: "DEMO_MAP_ID",
+          });
+        
+          // The marker, positioned at Uluru
+          const marker = new AdvancedMarkerElement({
+            map: map,
+            position: position,
+            title: "Uluru",
+          });
+        }
+        
+        initMap();
+    </script>
+</head>
+<body id="home">
+ <!-- navbar -->
+ <nav id="navbar">
+    <h1>
+        <span class="text-primary"><i class="fa-solid fa-book-open"></i> FIR</span> MA
+    </h1>
+    <ul>
+        <li><a href="#home">Avaleht</a></li>
+        <li><a href="#what">Teenused</a></li>
+        <li><a href="#who">Meeskond</a></li>
+        <li><a href="#clients">Kliendid</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+ </nav>
+ <!-- header - showcase -->
+  <header id="showcase">
+    <div class="showcase-content">
+        <h1 class="l-heading">Lihtsalt Tee Midagi</h1>
+        <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis labore asperiores aliquam nobis magnam, fuga consequatur architecto corrupti quasi mollitia inventore, aspernatur ipsum aliquid nulla, harum unde nam delectus esse.</p>
+        <a href="#what" class="btn btn-primary">Loe Rohkem</a>
+    </div>
+  </header>
+ <!-- #what -->
+ <section id="what" class="bg-light py-1">
+    <div class="container">
+        <h2 class="m-heading text-center">Mida Me <span class="text-primary">Pakume</span></h2>
+        <div class="items">
+            <div class="item text-center p-1">
+                <i class="fa-brands fa-codepen p-1"></i>
+                <div>
+                    <h3>Kirjutame</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A veritatis adipisci sapiente mollitia ea eum, quia culpa expedita incidunt laboriosam eaque eos sunt nihil omnis magni. Molestias alias debitis voluptates.</p>
+                </div>
+            </div>
+            <div class="item text-center p-1">
+                <i class="fa-solid fa-pencil p-1"></i>
+                <div>
+                    <h3>Kujundame</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A veritatis adipisci sapiente mollitia ea eum, quia culpa expedita incidunt laboriosam eaque eos sunt nihil omnis magni. Molestias alias debitis voluptates.</p>
+                </div>
+            </div>
+            <div class="item text-center p-1">
+                <i class="fa-solid fa-bug p-1"></i>
+                <div>
+                    <h3>Silume</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A veritatis adipisci sapiente mollitia ea eum, quia culpa expedita incidunt laboriosam eaque eos sunt nihil omnis magni. Molestias alias debitis voluptates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- #who -->
+ <section id="who">
+    <!-- img -->
+    <div class="who-img"></div>
+    <!-- text content -->
+    <div class="bg-dark p-1">
+        <h2 class="m-heading">Kes <span class="text-primary">Me</span> Oleme</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nemo inventore dolor iure id labore, voluptate dolorum suscipit nihil consequuntur incidunt doloribus asperiores, vitae repellat obcaecati dolore ea aliquam itaque.</p>
+        <h3>Meie Meeskond</h3>
+        <ul>
+            <li>Kaval Ants: projektijuht</li>
+            <li>Puna Mütsike: arendusjuht</li>
+            <li>Lumi Valgeke: konsultant</li>
+            <li>Jõulu Vana: arendaja</li>
+        </ul>
+    </div>
+ </section>
+ <!-- #clients -->
+ <section id="clients">
+    <div class="bg-light py-1">
+        <h2 class="m-heading text-center">Meie <span class="text-primary">Kliendid</span></h2>
+        <div class="py-1 items">
+            <div><img src="img/logo1.png" alt="Klient 1"></div>
+            <div><img src="img/logo2.png" alt="Klient 2"></div>
+            <div><img src="img/logo3.png" alt="Klient 3"></div>
+            <div><img src="img/logo4.png" alt="Klient 4"></div>
+            <div><img src="img/logo5.png" alt="Klient 5"></div>
+        </div>
+    </div>
+ </section>
+ <!-- #contact -->
+ <section id="contact">
+    <!-- form -->
+    <div class="p-1 bg-primary contact-form">
+        <h2 class="m-heading">Võta meiega ühendust</h2>
+        <p>Täida allolev vorm</p>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Nimi</label>
+                <input type="text" id="name" placeholder="Sisesta oma nimi">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Sisesta oma email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="phone" id="phone" placeholder="Sisesta oma telefoni number">
+            </div>
+            <div class="form-group">
+                <label for="message">Sõnum</label>
+                <textarea id="message" placeholder="Sisesta oma sõnum"></textarea>
+            </div>
+            <input type="submit" value="Saada" class="btn btn-dark">
+        </form>
+    </div>
+    <!-- map -->
+    <div id="map"></div>
+ </section>
+ <!-- #footer -->
+ <section id="footer">
+ </section>
+</body>
+</html>
