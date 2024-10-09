@@ -3,44 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/ab77d30533.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Comapany Web</title>
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyAOuCBUITS35JiqWZuBvipx_dC1qeOf6iI", v: "weekly"});
-    </script>
-    <script>
-      // Initialize and add the map
-      let map;
-
-      async function initMap() {
-        // The location of Uluru
-        const position = { lat: 58.349451, lng: 26.714695 };
-        // Request needed libraries.
-        //@ts-ignore
-        const { Map } = await google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-        // The map, centered at Uluru
-        map = new Map(document.getElementById("map"), {
-          zoom: 16,
-          center: position,
-          mapId: "map",
-        });
-
-        // The marker, positioned at Uluru
-        const marker = new AdvancedMarkerElement({
-          map: map,
-          position: position,
-          title: "Uluru",
-        });
-      }
-
-      initMap();
-  </script>
 </head>
 <body id="home">
- <!-- navbar -->
  <nav id="navbar">
     <h1>
         <span class="text-primary"><i class="fa-solid fa-book-open"></i> FIR</span> MA
@@ -53,7 +19,6 @@
         <li><a href="#contact">Kontakt</a></li>
     </ul>
  </nav>
- <!-- header - showcase -->
   <header id="showcase">
     <div class="showcase-content">
         <h1 class="l-heading">Lihtsalt Tee Midagi</h1>
@@ -61,7 +26,6 @@
         <a href="#what" class="btn btn-primary">Loe Rohkem</a>
     </div>
   </header>
- <!-- #what -->
  <section id="what" class="bg-light py-1">
     <div class="container">
         <h2 class="m-heading text-center">Mida Me <span class="text-primary">Pakume</span></h2>
@@ -90,11 +54,8 @@
         </div>
     </div>
  </section>
- <!-- #who -->
  <section id="who">
-    <!-- img -->
     <div class="who-img"></div>
-    <!-- text content -->
     <div class="bg-dark p-1">
         <h2 class="m-heading">Kes <span class="text-primary">Me</span> Oleme</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nemo inventore dolor iure id labore, voluptate dolorum suscipit nihil consequuntur incidunt doloribus asperiores, vitae repellat obcaecati dolore ea aliquam itaque.</p>
@@ -107,7 +68,6 @@
         </ul>
     </div>
  </section>
- <!-- #clients -->
  <section id="clients">
     <div class="bg-light py-1">
         <h2 class="m-heading text-center">Meie <span class="text-primary">Kliendid</span></h2>
@@ -120,9 +80,7 @@
         </div>
     </div>
  </section>
- <!-- #contact -->
  <section id="contact">
-    <!-- form -->
     <div class="p-1 bg-primary contact-form">
         <h2 class="m-heading">Võta meiega ühendust</h2>
         <p>Täida allolev vorm</p>
@@ -146,15 +104,46 @@
             <input type="submit" value="Saada" class="btn btn-dark">
         </form>
     </div>
-    <!-- map -->
     <div id="map" class="contact-map">
-      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOuCBUITS35JiqWZuBvipx_dC1qeOf6iI&callback=console.debug&libraries=maps,marker&v=beta">
+      <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf7yJw6OIP6sCig7BzFx6pts8X7X_ezR0&callback=console.debug&libraries=maps,marker&v=beta">
       </script>
     </div>
  </section>
- <!-- #footer -->
  <footer id="footer" class="bg-dark text-center py-1">
     <p>Kõik õigused on kaitstud &copy;2024</p>
  </footer>
+ <script src="https://kit.fontawesome.com/ab77d30533.js" crossorigin="anonymous"></script>
+ <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+    ({key: "AIzaSyAf7yJw6OIP6sCig7BzFx6pts8X7X_ezR0", v: "weekly"});
+ </script>
+ <script>
+      // Initialize and add the map
+     let map;
+
+      async function initMap() {
+        // The location of Uluru
+        const position = { lat: 58.349451, lng: 26.714695 };
+        // Request needed libraries.
+        //@ts-ignore
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+        // The map, centered at Uluru
+        map = new Map(document.getElementById("map"), {
+          zoom: 16,
+          center: position,
+          mapId: "map",
+        });
+
+        // The marker, positioned at Uluru
+        const marker = new AdvancedMarkerElement({
+          map: map,
+          position: position,
+          title: "Uluru",
+        });
+      }
+
+      initMap();
+  </script>
 </body>
 </html>
